@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let str = "Hello Word";
+
+  let x = str.charAt(3);
+  console.log(x);
+
+  let y = str.charCodeAt(1); // return the unicode
+  console.log(y);
+
+  let str1 = "IJSE";
+  let str2 = "LK";
+
+  let concat = str1.concat(str2,"Sri lanka","Asia");
+  console.log(concat); //marge
+
+  let x1 = "https://ijse.lk";
+  let x2 = "https://facebook.com";
+
+  x1.endsWith("https");
+  x1.startsWith("https");
+
+  let charCode = String.fromCharCode(72);
+  console.log(charCode);
+
+  let include = str.includes("word");
+  console.log(include);
+
+  let indexOf = str.indexOf("word");
+  console.log(indexOf);
+
+  let str5 = "java,python,html";
+  let replace = str5.replace(",","/");
+  console.log(replace);
+
+  let replaceAll = str5.replaceAll(",","/");
+  console.log(replaceAll);
+
+  let search = str5.search("t");
+  console.log(search);
+
+  let slice = str5.slice(5,10); // dena index eke idn ithuru tika denwa
+  console.log(slice);
+
+  let str6 = "javaScript";
+  let upperCase = str6.toUpperCase(); //capital
+  console.log(upperCase);
+
+  let lowerCase = str6.toLowerCase();// simple
+  console.log(lowerCase);
+
+  let str7 = ' thisura@gmail.com ';
+  let trim = str7.trim();
+  console.log(trim); // space eka nathi wnwa
+
+  var str8 = new String("hello"); //object eka thule thiyn value eka print krnwa
+  let valueOf = str8.valueOf();
+  console.log(valueOf);
+
+  let split = str5.split(",");
+  console.log(split);
+
+</script>
+</body>
+</html>

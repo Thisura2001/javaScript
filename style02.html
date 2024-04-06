@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+<div></div>
+<button>ON</button>
+
+
+<script>
+  document.getElementsByTagName("button")[0].addEventListener('click',function () {
+    var bulbElement = document.getElementsByTagName("div")[0];
+    var btnElement = document.getElementsByTagName("button")[0];
+
+    var styleOn = "background: yellow; box-shadow: 0px 0px 50px yellow;";
+    var styleOff = "background: none; box-shadow: none;";
+
+    if(btnElement.innerText === "ON"){
+      bulbElement.style.cssText = styleOn;
+      btnElement.innerText = "OFF";
+    }else{
+      bulbElement.style.cssText = styleOff;
+      btnElement.innerText = "ON";
+    }
+  });
+
+</script>
+</body>
+</html>

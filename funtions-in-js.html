@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //Named functions
+  function myFunction(){
+    console.log("Hello..");
+  }
+  function myFunction2(x,y){
+    console.log(x+" "+y);
+  }
+  myFunction();
+  myFunction2(1,"thisura");
+  myFunction2(); // does not show error because js is not type safety language
+
+  //function expression
+  var myFunction3 = function (){
+    console.log("Welcome to myFunction3")
+  }
+  myFunction3();
+
+  //Arrow functions
+  var ArrowFunctions = ()=>{
+    console.log("welcome to arrow functions")
+  }
+  ArrowFunctions();
+  var arrowFunction2 = (a,b)=>{
+    console.log(a+" "+b);
+  }
+  arrowFunction2(1,"nimal");
+
+  //annonymos function
+  (function (){
+    console.log("This is anonymus Funtion");
+  })
+
+  //call back functions
+  function process(x){
+    x();
+  }
+  function callback(){
+    console.log("Hello this is callback function")
+  }
+  process(callback());
+</script>
+</body>
+</html>
