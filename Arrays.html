@@ -6,17 +6,38 @@
 </head>
 <body>
 <script>
-  function findMax (ar) {
-      var max = ar[0];
-      for (var i = 0; i < ar.length; i++) {
-          if (ar[i] > max) {
-              max = ar[i];
-          }
-      }
-      console.log(max)
+  // function findMax (ar) {
+  //     var max = ar[0];
+  //     for (var i = 0; i < ar.length; i++) {
+  //         if (ar[i] > max) {
+  //             max = ar[i];
+  //         }
+  //     }
+  //     console.log(max)
+  // }
+  // var array1 = [1,2,3,4,5,6,7,8,9,10,11];
+  // findMax(array1);
+  // const findOdd = (odd) => {
+  //     for (let i = 0; i < odd.length; i++) {
+  //         if (odd[i]%2===1){
+  //             odd.splice(i,1);
+  //         }
+  //     }
+  //     return odd;
+  // }
+  // var odd = [1,2,3,4,5,6,7,8,9];
+  //   findOdd(odd);
+  // console.log(odd);
+var temp = [];
+  function findOdd(odd){
+    var result = odd.filter(function (item){
+        return item%2>0;
+    });
+    console.log(result);
   }
-  var array1 = [1,2,3,4,5,6,7,8,9,10,11];
-  findMax(array1);
+
+  var oddNum = [1,2,3,4,5,6,7,8,9];
+  findOdd(oddNum);
 </script>
 </body>
 </html>

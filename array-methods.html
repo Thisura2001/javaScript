@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ //  var ar = [];
+ //  console.log(ar);
+ //  ar.push(1);
+ //  console.log(ar);
+ //  ar.push(true);
+ //  console.log(ar); // push method eka magin array eke agata values add krnna puluwn
+ //
+ //  ar.pop();
+ //  console.log(ar); // pop method eka magin array ekaka aga thiyna value ek ain krnwa
+ //
+ //  ar.shift();
+ //  console.log(ar); // array ekaka 1 element eka remove krnw
+ //
+ //  ar.unshift("welcome");
+ //  console.log(ar);
+ //  ar.unshift(100,false,"Thisura");
+ //  console.log(ar); // array eke multa element add krnw
+ //
+ //  var array1 = [1,2,3];
+ //  var array2 = [4,5,6,7,8,9];
+ //  array1.concat(array2);
+ //  console.log(array2); // not affected any arrays
+ //  var concat = array1.concat(array2);
+ //  console.log(concat); // merge 2 arrays
+ //
+ // var sliceArray = concat.slice(3);
+ // console.log(sliceArray); // give all element after the index number
+ //
+ //  var sliceArray2 = concat.slice(2,6); //range 2 element and 6 element
+ //  console.log(sliceArray2);
+ //
+ //  var array3 = ["cat1","cat2","cat3","cat4","cat5"];
+ //  array3.splice(3);
+ //  console.log(array3); // remove all element after the given index
+ //
+ //  var array3 = ["cat1","cat2","cat3","cat4","cat5"];
+ //  array3.splice(2,2); //1 number = index number,  2 number = element count need to remove
+ //  console.log(array3);
+ //
+ //  array3.splice(1,2,"Dog");
+ //  console.log(array3);
+ //
+ // var array4 = [1,2,3,4,5];
+ // var x = array4.indexOf(4); // return index number of the array the elemet does not have the output will be -1
+ // console.log(x);
+ //
+ // var y = array4.includes(3); //if the given value include the array return true else return false
+ // console.log(y);
+ //
+ //  var odd = [1,2,3,4,5,6,7,8,9];
+ //  var result = odd.filter(function (item) {
+ //     return item%2>0;
+ //  });
+ //  console.log("result: "+result);
+ //
+ //  odd.map(item =>{
+ //     console.log(item);
+ //  });
+ //
+ //  odd.map(item,index =>{
+ //      console.log(item , index);
+ //  });
+  // function findMax (ar) {
+  //     var max = ar[0];
+  //     ar.map(item =>{
+  //         if (item>max){
+  //             max=item;
+  //         }
+  //     });
+  //     console.log(max);
+  // }
+  // var max = [1,2,3,4,5,86,7,8,9,10,11];
+  // findMax(max);
+
+  var myArray = [20,10,40,30,15];
+  // var sort = myArray.sort(myArray); //10,15,20,30,40
+  // console.log(sort);
+
+  var z = myArray.some(function (item) {
+      return item%2==0
+  });
+  console.log(z);
+
+ var join = myArray.join("/ ");
+ console.log(join);
+
+
+</script>
+</body>
+</html>

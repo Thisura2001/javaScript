@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .OnClass {
+            background-color: yellow;
+            width: 200px;
+            aspect-ratio: 1/1;
+            border-radius: 200px;
+
+        }
+        .mouserOver {
+            background-color:deeppink;
+            width: 200px;
+            aspect-ratio: 1/1;
+            border-radius: 200px;
+
+        }
+        .mouserDown {
+            background-color:blue;
+            width: 200px;
+            aspect-ratio: 1/1;
+            border-radius: 200px;
+
+        }
+        .mouserUp {
+            background-color:mediumpurple;
+            width: 200px;
+            aspect-ratio: 1/1;
+            border-radius: 200px;
+
+        }
+        .focus {
+            background-color:palevioletred;
+
+
+        }
+        .keydown {
+            background-color:skyblue;
+
+
+        }
+        .keyup {
+            background-color:deepskyblue;
+
+
+        }
+    </style>
+</head>
+<body>
+<button id="select">Select</button>
+<button id="reset">Reset</button>
+<label>0</label>
+<div id="bulb"></div>
+<button id="switch">ON</button>
+<br>
+<div class="OnClass" id="eventDiv"></div>
+<br>
+<input type="text" id="text1">
+
+<script src="assests/lib/jquery-3.7.1.min.js"></script><!--top of all scripts-->
+<script>
+    $("button").eq(0).on('click', () => {
+        let text = $("label").eq(0).text();
+        let newText = parseInt(text) + 1;
+        $("label").eq(0).text(newText);
+
+    })
+
+    var css = {
+        width: 200, aspectRatio: 1 / 1, borderRadius: 200
+
+    }
+
+    $('#bulb').css(css);
+    $('#switch').on('click', () => {
+
+
+        if ($('#switch').text()==="ON") {
+
+            $('#bulb').addClass("OnClass");
+            $('#switch').text("OFF");
+        } else  {
+            $('#bulb').removeClass("OnClass");
+            $('#switch').text ("ON");
+        }
+
+    })
+    $('#eventDiv').on('mouseover',()=>{
+        $('#eventDiv').addClass("mouserOver");
+    })
+    $('#eventDiv').on('mousedown',()=>{
+        /*   $('#eventDiv').addClass("mouserDown");*/
+    })
+    $('#eventDiv').on('mouseup',()=>{
+        $('#eventDiv').addClass("mouserUp");
+    })
+    $('#text1').on('focus',()=>{
+        $('#text1').addClass("focus");
+    })
+    $('#text1').on('keydown',()=>{
+        $('#text1').addClass("keydown");
+    })
+    $('#text1').on('keyup',()=>{
+        $('#text1').addClass("keyup");
+    })
+
+
+
+
+</script>
+</body>
+
+</html>

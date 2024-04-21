@@ -18,13 +18,11 @@
 <body>
 <div></div>
 <button>ON</button>
-
-
 <script>
-  document.getElementsByTagName("button")[0].addEventListener('click',function () {
-    var bulbElement = document.getElementsByTagName("div")[0];
-    var btnElement = document.getElementsByTagName("button")[0];
+  var bulbElement = document.getElementsByTagName("div")[0];
+  var btnElement = document.getElementsByTagName("button")[0];
 
+  document.getElementsByTagName("button")[0].addEventListener('click',function () {
     var styleOn = "background: yellow; box-shadow: 0px 0px 50px yellow;";
     var styleOff = "background: none; box-shadow: none;";
 

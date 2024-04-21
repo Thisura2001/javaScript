@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Welcome to jQuery</h1>
+<h1>Welcome to jQuery</h1>
+<h1>Welcome to jQuery</h1>
+
+<ul id="first-list">
+    <li>java</li>
+    <li>python</li>
+    <li>C</li>
+    <li>C++</li>
+    <li>C#</li>
+</ul>
+<ul id="second-list">
+    <li>react</li>
+    <li>angular</li>
+    <li>Vue</li>
+</ul>
+
+<script src="assests/lib/jquery-3.7.1.min.js"></script>
+<script>
+  // $("h1").eq(0).text(); // welcome to jQuery
+  // $("h1").eq(1).text();// welcome to jQuery
+  // $("h1").eq(2).text();// welcome to jQuery
+  //
+  // $("h1").first().text(); //select first of the h1
+  // $("h1").last().text(); //select last of the h1
+  //
+  // $("h1").first().text("Welcome to the IJSE"); //change the first h1
+  //
+  // // $("li").eq(2).text("Go");
+  // // $("#first-list>li:nth-child(2)").text("go");
+  // $(document).ready(funtion($("#first-list>li:nth-child(2)").text("go")));
+
+  //jq styles
+  var css = {
+      color: "pink",
+      background: "Yellow"
+  }
+  $("h1").eq(1).css(css);
+  $("h1").eq(2).css(
+      {
+          color: "pink",
+          background: "Yellow"
+      }
+  );
+
+</script>
+</body>
+</html>
