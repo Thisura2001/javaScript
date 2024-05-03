@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+<script src="assests/lib/jquery-3.7.1.min.js"></script>
+<script>
+  //constructor function
+  // function  person(name,age){
+  //     this.name = name;
+  //     this.age = age;
+  // }
+  // var person = new person("thisura",22);
+  // console.log(person.name);
+  // console.log(person.age);
+  //
+  // //class syntax
+  class person1 {
+      constructor(name,age) {
+        this.name = name;
+        this.age = age;
+      }
+      myMethod1(){
+          console.log("myMethod1");
+      }
+      myMethod2(){
+          console.log("myMethod2");
+      }
+  }
+  let p = new person1("vimukthi",23);
+  console.log(p.name);
+  console.log(p.age);
+  console.log(p.myMethod1());
+  //
+  // //object literal
+  // let person3 = {
+  //     name:"thisura",
+  //     age:22
+  // };
+  // console.log(person3.name);
+  // console.log(person3.age);
+  //
+  // //object.create
+  //
+  // const person4 = {
+  //     hello: function () {
+  //         console.log("hiiii");
+  //     }
+  // }
+  // const person4 = Object.create(person4);
+  // console.log(person4);
+  // person4.hello();
+//
+//   let person5 = {
+//       name:"thisura",
+//       age:22,
+//       address:"matugama"
+//   }
+// console.log(person5);
+//   //update object
+//   person5.name = "thisu";
+//   console.log(person5);
+//
+//   person5.institute = "IJSE";
+//   console.log(person5);
+//
+//   class person6 {
+//       constructor(name,age) {
+//           this._name = name;//this means private property(_)
+//           this._age = age;//this means private property(_)
+//       }
+//
+//       get name(){
+//           return this._name;
+//       }
+//       set name(name){
+//           this._name = name+" is my name";
+//       }
+//   }
+// var person6 = new person6("thisura",22);
+// console.log(person6.name);
+// person6.name = "thisu";
+
+
+// var person7 = {
+//     _name:"thisura",
+//     get name(){
+//         return this._name;
+//     },
+//     set name(name){
+//         this._name = name+" is my name";
+//     }
+// }
+// console.log(person7.name);
+// person7.name = "thisu";
+// console.log(person7.name);
+</script>
+</body>
+</html>
