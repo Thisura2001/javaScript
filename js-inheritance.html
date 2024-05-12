@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js-Inheritance</title>
+</head>
+<body>
+<script>
+  class Animal{
+    constructor(name) {
+      this.name = name;
+    }
+    move(){
+      console.log(`${this.name} is Moving`);
+    }
+
+  }
+  class Rabbit extends Animal{
+      name = "Rabbit";
+  }
+  class Dog extends Animal{
+    name = "Dog";
+  }
+  class Fish extends Animal{
+    name = "Fish";
+  }
+
+  console.log(new Rabbit().move());
+  console.log(new Dog().move());
+  console.log(new Fish().move());
+
+  function Human(){
+      human = "Man";
+  }
+  Human.prototype.human = "Man";
+  Human.prototype.drive = function (){
+      console.log("Let's Drive");
+  };
+  function Student(){
+
+  }
+  Student.prototype = Object.create(Human.prototype);
+  console.log(new Human());
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        border: 10px solid #d21a1a;
+        display: inline-block;
+        margin-right: 120px;
+    }
+
+    div > h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+</style>
+<div id="value1"><h2>A</h2></div>
+<div id="value2"><h2>B</h2></div>
+<div id="value3"><h2>C</h2></div>
+<div id="value4"><h2>D</h2></div>
+<div id="value5"><h2>E</h2></div>
+<div id="value6"><h2>F</h2></div>
+<br><br>
+<button id="startbtn">Start</button>
+<button id="stopbtn">Stop</button>
+<body>
+<script src="assests/lib/jquery-3.7.1.min.js"></script>
+<script>
+    var queueOrder = ['A', 'B', 'C', 'D', 'E', 'F'];
+    function replaceValues() {
+        let lastValue = queueOrder.pop();
+        queueOrder.unshift(lastValue);
+
+        // Update the text content of the h2 elements within the divs
+        $('#value1 > h2').text(queueOrder[0]);
+        $('#value2 > h2').text(queueOrder[1]);
+        $('#value3 > h2').text(queueOrder[2]);
+        $('#value4 > h2').text(queueOrder[3]);
+        $('#value5 > h2').text(queueOrder[4]);
+        $('#value6 > h2').text(queueOrder[5]);
+    }
+        $("#startbtn").on('click',function (){
+           myInterval = setInterval(replaceValues, 1000);
+        })
+
+        $("#stopbtn").on('click',function (){
+            clearInterval(myInterval)
+        })
+
+</script>
+</body>
+</html>

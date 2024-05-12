@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+
+      #score-panel{
+          background: black;
+          position: absolute;
+          top: 20px;
+          left: 10px;
+          width: 120px;
+          height: 60px;
+          text-align: center;
+      }
+
+      h3{
+          display: inline-block;
+          color: white;
+      }
+    #pointer{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+        background-image: url("assests/img/target.png");
+    }
+    #moving {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background-image: url("assests/img/icons8-ninja-96.png");
+    }
+  </style>
+</head>
+<body>
+<div id="score-panel">
+    <h3>Score:</h3>
+    <h3 id="score">0</h3>
+</div>
+<div id="pointer"></div>
+<div id="moving"></div>
+<script src="assests/lib/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).on("mousemove",(e)=>{
+      console.log('moving-X:',e.pageX);
+      console.log('moving-Y:',e.pageY);
+
+      $('#pointer').css({
+        left:e.pageX-50,
+        top:e.pageY-50
+      })
+    });
+    var x = Math.random()*100
+
+    setInterval(()=>{
+        $('#moving').css({
+            left: `${Math.floor(Math.random()*100)}vw`,
+            top: `${Math.floor(Math.random()*100)}vh`
+        });
+    },100)
+
+    $("#moving").on('click',function (){
+        let score = +($('#score').text());
+        score++;
+        $('#score').text(score);
+    })
+</script>
+</body>
+</html>

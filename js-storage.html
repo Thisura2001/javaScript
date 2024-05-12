@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>JS Storage</h1>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script>
+  //local storage = data eka ain krnne na clean krnkm
+  // var name = "thisura";
+  // localStorage.setItem("name",name);
+  // localStorage.setItem("count",1000);
+  //
+  // let item = localStorage.getItem("name");
+  // console.log("item : ",item);
+  //
+  //
+  // //remove localStorage
+  // localStorage.removeItem("name");
+
+  //session storage = session eka iwra wnkn withry data thiygen inne
+  // sessionStorage.setItem("institute","ijse");
+  // let sessionStorageItems = sessionStorage.getItem("institute");
+  // console.log(sessionStorageItems);
+  //
+  // sessionStorage.removeItem("institute");
+
+  //cookies
+
+  // document.cookie = `name = "IJSE"; expires="Sat , 4 May 2024 10:29:00 UTC"`;
+  // console.log(document.cookie);
+
+  Cookies.set("GDSE","Internet technology",{expires:7});
+  var val = Cookies.get("GDSE");
+  console.log(val);
+</script>
+</body>
+</html>

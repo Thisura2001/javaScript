@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers</title>
+</head>
+<h1>JS_TIMERS</h1>
+<body>
+<script>
+    function callMe(){
+        console.log("Called!!");
+    }
+    function myInterval(){
+        console.log("Looping");
+    }
+    var count;
+    function callMe2(){
+        console.log("Called!!");
+        ++count;
+        if (count>5){
+            clearInterval(myInterval);
+        }
+    }
+    setTimeout(callMe,5000); //5000ms
+
+    setInterval(callMe2,5000);//loop
+    myInterval = setInterval(callMe2,5000);
+</script>
+</body>
+</html>
